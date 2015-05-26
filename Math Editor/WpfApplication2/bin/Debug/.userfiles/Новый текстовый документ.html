@@ -1,0 +1,89 @@
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:mml="http://www.w3.org/1998/Math/MathML">
+<head>
+<title>UniMath Editor: ASCII</title>
+<script type="text/javascript" src="ASCIIMathML.js"></script>
+<script type="text/javascript" src="unimath.js"></script>
+<script type="text/javascript" src="ASCIIMathMLeditor_my.js"></script>
+<link rel="stylesheet" href="unimath.css" type="text/css"/>
+</head>
+<body>
+
+<table style="width:100%">
+<col style="width:0%" />
+<col />
+
+
+
+<input id="use_mathml" type="checkbox" style="display:none">
+<label for="use_mathml"></label>
+
+
+
+<form>
+<textarea id="inputText" rows="15" cols="40" onkeyup="display_my(false)" style="width:100%;display:none">`a^sdf12^(6654654)|</textarea>
+</form>
+</td>
+<td valign="top">
+<div id="outputNode"/>
+</td></tr>
+
+<tr><td>
+<input id="debug" type="checkbox" style="display:none"/><label for="debug"> </label>
+</td></tr>
+
+</table>
+
+<textarea id="sourceHtml" cols="80" rows="10" style="display:none">
+</textarea>
+
+<!--<p>
+(Copy and paste the following lines to see what symbols they produce)<br/>
+<b>You can use the following ASCIIMathML constructs:</b> 
+<tt> `(x+1)/(x-1) x^(i+j) x_(ij) sqrt(x) root(n)(x) text(any)`</tt><br/>
+<b>Operation symbols</b> 
+<tt> `+ - * ** // \\ xx -: @ o+ ox sum prod ^^ ^^^ vv vvv nn nnn uu uuu`</tt><br/>
+<b>Relation symbols</b>
+<tt> `= != &lt; &lt;= > >= -&lt; >- in !in sub sup sube supe -= ~= ~~ prop`</tt><br/>
+<b>Logical symbols</b><tt> `and or not => if iff AA EE _|_ TT |- |=`</tt><br/>
+<b>Miscellaneous symbols</b> 
+<tt> `int oint del grad +- O/ oo aleph ... cdots \  quad qquad diamond square |_ _| |~ ~| CC NN QQ RR ZZ`</tt><br/>
+<b>Standard functions</b> 
+<tt> `sin cos tan csc sec cot sinh cosh tanh log ln det dim lim mod gcd lcm`</tt><br/>
+<b>Grouping brackets</b><tt> `( ) [ ] { } (: :) {: :}` </tt> 
+<b>Arrows</b><tt> `uarr darr rarr -> larr harr rArr lArr hArr` </tt><br/>
+<b>Accents</b><tt> `hatx barx ulx vecx dotx ddotx` </tt>
+<b>Font commands</b><tt> `bbA bbbA ccA ttA frA sfA` </tt>
+<b>Matrices</b><tt> `[[a,b],[c,d]] ((1,0),(0,1))` </tt><br/>
+<b>Greek letters</b><tt> `alpha beta chi delta Delta epsi eta gamma Gamma
+iota kappa lambda Lambda mu nu omega Omega phi Phi pi Pi psi rho sigma Sigma 
+tau theta Theta upsilon xi Xi zeta`</tt> 
+</p>
+-->
+<script type="text/javascript">
+
+AMinitSymbols(); // Prepare ASCIIMath
+window.onload=function (){
+display_my(true);
+document.body.style.zoom = 1.7;
+}
+function display_my(bool)
+{
+  AMdisplay(bool);
+  Debug = document.getElementById("debug").checked;
+  var writeroot = document.getElementById('outputNode');
+  if (!document.getElementById("use_mathml").checked)
+    ReplaceMathByHtml(writeroot);
+
+  var sourceHtml = document.getElementById('sourceHtml');
+  if (Debug) {
+    sourceHtml.value = writeroot.innerHTML;
+    sourceHtml.style.display = "block";
+  } else
+    sourceHtml.style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

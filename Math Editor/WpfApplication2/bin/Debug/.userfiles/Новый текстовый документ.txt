@@ -1,0 +1,24 @@
+<!-- saved from url=(0014)about:internet -->
+<html xmlns:mml="http://www.w3.org/1998/Math/MathML">
+<head>
+<title>UniMath Editor: ASCII</title>
+<script type="text/javascript" src="ASCIIMathML.js"></script>
+<script type="text/javascript" src="unimath.js"></script>
+<script type="text/javascript" src="ASCIIMathMLeditor_my.js"></script>
+<link rel="stylesheet" href="unimath.css" type="text/css"/>
+</head>
+<body>
+
+<table style="width:100%">
+<col style="width:0%" />
+<col />
+
+
+
+<input id="use_mathml" type="checkbox" style="display:none">
+<label for="use_mathml"></label>
+
+
+
+<form>
+<textarea id="inputText" rows="15" cols="40" onkeyup="display_my(false)" style="width:100%;display:none">
